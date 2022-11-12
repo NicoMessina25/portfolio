@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #000000; }
+
+.flexible--row {
+  display: flex;
+  flex-direction: row; }
+
+.flexible--rowWrap {
+  display: flex;
+  flex-flow: row wrap; }
+
+.flexible--rowReverse {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.flexible--column {
+  display: flex;
+  flex-direction: column; }
+
+.flexible--columnReverse {
+  display: flex;
+  flex-direction: column-reverse; }
+
+.flexible--columnWrap {
+  display: flex;
+  flex-flow: column wrap; }
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 100%;
+  font-weight: 700;
+  width: fit-content;
+  border-radius: 75px;
+  transition: all .1s;
+  padding: 1%;
+  font-weight: 400; }
+  .button:hover {
+    transform: scale(1.1, 1.1);
+    color: #000000;
+    background-image: linear-gradient(180deg, #10ae1d, #1feb30); }
+
+.mainTitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 300%;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 1%;
+  font-style: italic; }
+
+.subTitle {
+  color: #ffffff;
+  text-align: center;
+  padding: 1%;
+  font-size: 300%;
+  margin: 3% 0%;
+  transition: all 2s; }
+  .subTitle:hover {
+    box-shadow: 1px 0px 10px 1px #1feb30; }
+
+header {
+  justify-content: space-around;
+  margin: 0;
+  padding: 2%;
+  z-index: 8;
+  border-bottom: 2px solid #1feb30; }
+  header nav {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center; }
+    header nav .menu {
+      justify-content: space-around;
+      width: 70%;
+      list-style: none;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 100%;
+      font-weight: 600; }
+  header .logo {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 300%;
+    font-weight: 200; }
+
+.projectSection div {
+  justify-content: space-evenly; }
+  .projectSection div .project {
+    margin: 1%;
+    padding: 2%;
+    border-radius: 50px;
+    width: 25%;
+    transition: all .5s;
+    justify-content: space-around;
+    align-items: center; }
+    .projectSection div .project img {
+      width: 80%;
+      height: auto; }
+    .projectSection div .project span {
+      color: #1feb30; }
+    .projectSection div .project .button {
+      padding: 2%;
+      width: 100%; }
+    .projectSection div .project .title {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 250%;
+      font-weight: 400;
+      margin: 1%;
+      padding: 2%;
+      text-align: center; }
+    .projectSection div .project a {
+      text-decoration: none;
+      width: 50%; }
+    .projectSection div .project:hover {
+      box-shadow: 1px 0px 10px 1px #1feb30; }

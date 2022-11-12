@@ -1,0 +1,42 @@
+[
+    {
+        "name":"HTML",
+        "img":"./htmlLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"CSS",
+        "img":"./cssLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"JavaScript",
+        "img":"./jsLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"React Js",
+        "img":"reactLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"SASS",
+        "img":"sassLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"Java",
+        "img":"javaLogo.png",
+        "knowledge":"high"
+    },
+    {
+        "name":"Vaadin",
+        "img":"vaadinLogo.png",
+        "knowledge":"low"
+    },
+    {
+        "name":"Spring",
+        "img":"springLogo.png",
+        "knowledge":"low"
+    }
+]
