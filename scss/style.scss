@@ -69,13 +69,16 @@ body{
     //@include colAndBGCol(map-get($mainCol, primary), map-get($mainCol, terciary));
     color: map-get($mainCol, secondary);
     text-align: center;
-    
+    border-radius: 75px;
     padding: 1%;
     font-size: 300%;
     margin: 3% 0%;
-    transition: all 2s;
+    transition: all 1s;
     //animation: subTitleAnimation 5s alternate infinite;
     &:hover{
+        span{
+            color: map-get($mainCol, terciary);
+        }
         box-shadow: 1px 0px 10px 1px map-get($mainCol, terciary);
     }
 }
@@ -84,6 +87,9 @@ header{
     justify-content: space-around;
     @include marPad(0,2%);
     z-index: 8;
+    position: sticky;
+    top:0px;
+    background-color: map-get($transpMainCol, transPrimary);
     border-bottom: 2px solid map-get($mainCol, terciary);
     nav{
         width: 100%;
@@ -95,6 +101,12 @@ header{
             width: 70%;
             list-style: none;
             @include fonts($primaryFont, 100%, 600);
+
+            a{
+                color: inherit;
+                text-decoration: none;
+            }
+
         }
 
     }
@@ -105,8 +117,10 @@ header{
     }
 }
 
-.projectSection{
+.section{
     
+    padding: 2%;
+
     div{
         justify-content: space-evenly;
 
@@ -121,11 +135,10 @@ header{
     
             img{
                 @include sizes(80%, auto);
+                border-radius: 10px;
             }
     
-            span{
-                color: map-get($mainCol, terciary);
-            }
+            
 
             .button{
                 padding: 2%;
@@ -145,11 +158,28 @@ header{
     
             &:hover{
                 box-shadow: 1px 0px 10px 1px map-get($mainCol, terciary);
+                span{
+                    color: map-get($mainCol, terciary);
+                }
             }
+        }
+
+        .technology{
+            @extend.project;
+            width: 10%;
+            font-size: 70%;
         }
 
     }
     
+}
 
-    
+.footer{
+    @include marPad(0, 2%);
+    justify-content: space-evenly;
+    border-top: 2px solid map-get($mainCol, terciary);
+    a{
+        width: 40%;
+        text-align: center;
+    }
 }

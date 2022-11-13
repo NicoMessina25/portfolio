@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolás Messina</title>
+    <link rel="icon" type="imgage/png" href="img/NM.png">
     <script src="https://kit.fontawesome.com/83ba80bc14.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,20 +14,20 @@
         <span class="logo">NM</span>
         <nav class="flexible--row">
             <ul class="menu flexible--row">
-                <li class="button">Me</li>
-                <li class="button">Projects</li>
-                <li class="button">Technologies</li>
-                <li class="button">Contact</li>
+                <li class="button"><a href="#sectionMe" id="menuItemMe">Me</a></li>
+                <li class="button"><a href="#sectionProjects" id="menuItemProjects">Projects</a></li>
+                <li class="button"><a href="#sectionTechnologies" id="menuItemTechnologies">Technologies</a></li>
+                <li class="button"><a href="#sectionContact" id="menuItemContact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="meSection">
+    <section id="sectionMe" class="section">
         <h1 class="mainTitle">NICOLÁS MESSINA</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis illo ducimus nostrum quidem veritatis omnis voluptas possimus. Sapiente vero libero iure optio natus possimus voluptas, rem nostrum deserunt beatae.</p>
         <img src="" alt="">
     </section>
-    <section class="projectSection">
-        <h2 class="subTitle">PROJECTS</h2>
+    <section id="sectionProjects" class="section">
+        <h2 class="subTitle"><span>PRO</span>JECTS</h2>
         <div id="divProjects" class="flexible--rowWrap">
             <!-- <article class="project flexible--column"> 
                 <h3 class="title"> <span>K</span>ygo <span>W</span>eb</h3> 
@@ -46,9 +47,17 @@
         </div>
         
     </section>
-    <section>
-        
+    <section id="sectionTechnologies" class="section">
+        <h2 class="subTitle"><span>TECH</span>NOLOGIES</h2>
+        <div id="divTechnologies" class="flexible--rowWrap">
+            
+        </div>
     </section>
+    <footer id="sectionContact" class="flexible--row footer">
+        <a href="https://github.com/NicoMessina25" target="blank"><button class="button"><i class="fa-brands fa-github"></i>  GitHub</button></a>
+        <a href="#contact"><button class="button"><i class="fa-solid fa-envelope"></i>  nicolasmessina25@gmail.com</button></a>
+        <a href="https://www.linkedin.com/in/nicolás-messina-114ab11b0/"><button class="button"><i class="fa-brands fa-linkedin"></i>  LinkedIn</button></a>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

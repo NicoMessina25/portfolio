@@ -1,42 +1,26 @@
 [
     {
         "name":"HTML",
-        "img":"./htmlLogo.png",
-        "knowledge":"high"
+        "img":"./img/htmlLogo.png"
     },
     {
         "name":"CSS",
-        "img":"./cssLogo.png",
-        "knowledge":"high"
+        "img":"./img/cssLogo.png"
     },
     {
-        "name":"JavaScript",
-        "img":"./jsLogo.png",
-        "knowledge":"high"
+        "name":"Java Script",
+        "img":"./img/jsLogo.png"
     },
     {
         "name":"React Js",
-        "img":"reactLogo.png",
-        "knowledge":"high"
+        "img":"./img/reactLogo.png"
     },
     {
         "name":"SASS",
-        "img":"sassLogo.png",
-        "knowledge":"high"
+        "img":"./img/sassLogo.png"
     },
     {
         "name":"Java",
-        "img":"javaLogo.png",
-        "knowledge":"high"
-    },
-    {
-        "name":"Vaadin",
-        "img":"vaadinLogo.png",
-        "knowledge":"low"
-    },
-    {
-        "name":"Spring",
-        "img":"springLogo.png",
-        "knowledge":"low"
+        "img":"./img/javaLogo.png"
     }
 ]

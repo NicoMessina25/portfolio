@@ -1,7 +1,7 @@
 $mainCol:(primary: #000000, secondary: #ffffff, terciary: #1feb30); 
 $lightMainCol:(lighterPrimary: lighten(map-get($mainCol, primary), 30), lighterSecondary:lighten(map-get($mainCol, secondary), 30),lighterTerciary:lighten(map-get($mainCol, terciary), 30));
 $darkMainCol:(darkerPrimary: darken(map-get($mainCol, primary), 15), darkerSecondary: darken(map-get($mainCol, secondary), 15), darkerTerciary: darken(map-get($mainCol, terciary), 15));
-$transpMainCol:(transPrimary: rgba(10, 5, 5, 0.85), transBlue: rgba(4, 200, 242,0.85));
+$transpMainCol:(transPrimary: rgba(0, 0, 0, 0.95), transBlue: rgba(4, 200, 242,0.85));
 //$colTransp:(blackTransp: rgba(0, 0, 0, 0.75), primaryTransp: rgba(10, 35, 71, 0.15), darkerPrimaryTransp: rgba(7, 9, 27, 0.05),secondaryTransp: rgba(0, 204, 153, 0.15),darkerSecondaryTransp: rgba(30, 156, 160, 0.15),transp0: rgba(10, 35, 71,0));
 //$colorRedSoc:(youTube: #FF0000, spotify: #1DB954, twitter: #1DA1F2, instagram: #833AB4);
 //$visited: #485099; #140b0b
