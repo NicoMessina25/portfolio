@@ -58,7 +58,7 @@ body{
 }
 
 .mainTitle{
-    @include fonts($primaryFont, 300%, 100);
+    @include fonts($primaryFont, 500%, 100);
     color: map-get($mainCol, secondary);
     padding: 1%;
     font-style: italic;
@@ -73,7 +73,7 @@ body{
     padding: 1%;
     font-size: 300%;
     margin: 3% 0%;
-    transition: all 1s;
+    transition: all .7s;
     //animation: subTitleAnimation 5s alternate infinite;
     &:hover{
         span{
@@ -81,6 +81,12 @@ body{
         }
         box-shadow: 1px 0px 10px 1px map-get($mainCol, terciary);
     }
+}
+
+.text--justify{
+    font-size: 150%;
+    text-align: justify;
+    font-weight: 300;
 }
 
 header{
@@ -119,7 +125,10 @@ header{
 
 .section{
     
+    
     padding: 2%;
+    border-radius: 75px;
+
 
     div{
         justify-content: space-evenly;
@@ -170,6 +179,26 @@ header{
             font-size: 70%;
         }
 
+    }
+    
+}
+
+.meSection{
+    @extend.section;
+    margin: 2%;
+    background-image: url("../img/meSectionBG2.jpg");
+    transition: all .5s;
+
+    &:hover{
+        transform: scale(1.005,1.005);
+        background-image: url("../img/meSectionBG.jpg");
+        box-shadow: 1px 0px 10px 1px map-get($mainCol, terciary);
+
+        .mainTitle{
+            span{
+                color: map-get($mainCol, terciary);
+            }
+        }
     }
     
 }
