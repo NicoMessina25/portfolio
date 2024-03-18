@@ -1,0 +1,22 @@
+---
+export interface MenuItemProps {
+    label:string,
+    href?:string,
+    active?:boolean
+}
+
+interface Props extends MenuItemProps {
+    
+}
+
+const {label, href = "#", active} = Astro.props
+
+
+---
+
+<a 
+    class="p-2 font-semibold"
+    href=""
+    >
+    {label}
+</a>

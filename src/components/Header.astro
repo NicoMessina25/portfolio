@@ -1,0 +1,30 @@
+---
+import type { Code, Debug } from 'astro:components'
+import MenuItem from './MenuItem/MenuItem.astro'
+import type {MenuItemProps} from './MenuItem/MenuItem.astro'
+
+const menuItems:MenuItemProps[] = [{
+    label:"Experience",
+    href:"/#experience"
+},{
+    label:"Projects",
+    href:"/#projects"
+},{
+    label:"About me",
+    href:"/#aboutMe"
+},{
+    label:"Contact",
+    href:"/#contact"
+}]
+
+---
+
+<header class="w-2/3">
+    <img src="" alt="">
+
+    <nav>
+        {menuItems.map((menuItem)=>
+            <MenuItem {...menuItem} />
+        )}
+    </nav>
+</header>
