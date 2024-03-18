@@ -22,5 +22,9 @@
     {
         "name":"Java",
         "img":"./img/javaLogo.png"
+    },
+    {
+        "name":"C",
+        "img":"./img/cLogo.png"
     }
 ]

@@ -40,7 +40,7 @@ loadProjects(arrProj).then(()=>{
             <article class="project flexible--column"> 
                 <h3 class="title"> ${title.innerHTML} </h3>
                 <img src="${img}" alt="">
-                <a href="${link}" target="blank"><button class="button"><i class="fa-solid fa-square-arrow-up-right"></i>  Visitar Sitio</button></a>
+                <a href="${link}" target="blank"><button class="button"><i class="fa-solid fa-square-arrow-up-right"></i>  Visit Site</button></a>
                 <a href="${git}" target="blank"><button class="button"><i class="fa-brands fa-github"></i>  GitHub</button></a>
             </article>
         `
