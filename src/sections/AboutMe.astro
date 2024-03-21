@@ -1,0 +1,28 @@
+---
+import SectionHeader from '../components/SectionHeader.astro'
+import User from '../components/icons/User.astro'
+---
+<section class="">
+    <SectionHeader>
+        <User slot='before' class="size-8" />
+        About me
+    </SectionHeader>
+    <article class="flex">
+        <div class="flex-col w-full lg:w-2/3">
+            <p class="mb-2 text-pretty">
+                I'm Nicolás Messina from Argentina and my journey into the world of programming began at the age of 17, crafting algorithms in <span class="font-code text-accent-300 ml-1">Raptor</span>. Since then, my love for <span class="font-code text-accent-300 mx-1">software development</span> has led me on a dynamic path of learning and exploration, where I've honed my skills across various languages and technologies.
+            </p>
+            <p class="my-2 text-pretty">
+                Currently, I hold a pivotal role as a <span class="font-code text-accent-300 ml-2">FullStack Developer</span>, leading a talented team at <span class="font-code text-accent-300 ml-1">Advenio Software</span>. Concurrently, I'm pursuing a degree in <span class="font-code text-accent-300 ml-1">Computer Engineering at FASTA University</span>.
+            </p>
+            <p class="my-2 text-pretty">
+                My journey into web development commenced at Coderhouse, where I immersed myself in <span class="font-code text-accent-300 ml-1">React FrontEnd Software Development</span>, laying the groundwork for my expertise in creating captivating user experiences. 
+            </p>
+            <p class="mt-2 text-pretty">
+                Additionally, I'm proud to be a co-author of a research paper delving into the intersection of <span class="font-code text-accent-300 ml-1">Computer Security and AI Systems</span>, specifically exploring their role in wildfire prediction—a topic of immense relevance and importance.
+            </p>
+        </div>
+        <img src="img/profile2.png" alt="Foto de Nico Messina" class="absolute transform rounded-3xl w-[750px] sm:w-[650px] lg:w-[550px] h-auto -z-10 opacity-15 translate-x-10 sm:translate-x-36 md:translate-x-60 bottom-52 sm:origin-bottom-right">
+   
+    </article>
+</section>

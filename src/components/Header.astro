@@ -1,30 +1,70 @@
 ---
 import type { Code, Debug } from 'astro:components'
-import MenuItem from './MenuItem/MenuItem.astro'
-import type {MenuItemProps} from './MenuItem/MenuItem.astro'
+import MenuItem from './MenuItem.astro'
+import type {MenuItemProps} from './MenuItem.astro'
+import { EMenuItems } from '../types/EMenuItems'
 
 const menuItems:MenuItemProps[] = [{
+    label:"Home",
+    href:"/#home",
+    menuItem: EMenuItems.HOME,
+},    
+{
     label:"Experience",
-    href:"/#experience"
+    href:"/#experience",
+    menuItem: EMenuItems.EXPERIENCE,
 },{
     label:"Projects",
-    href:"/#projects"
+    href:"/#projects",
+    menuItem: EMenuItems.PROJECTS,
 },{
+    label:"Tech Stack",
+    href:"/#techStack",
+    menuItem: EMenuItems.TECH_STACK,
+},
+{
     label:"About me",
-    href:"/#aboutMe"
-},{
-    label:"Contact",
-    href:"/#contact"
+    href:"/#aboutMe",
+    menuItem: EMenuItems.ABOUT_ME,
 }]
 
 ---
 
-<header class="w-2/3">
-    <img src="" alt="">
+<header class="min-w-[300px] w-5/6 md:w-3/5 lg:max-w-4xl md:max-w-2xl flex justify-between fixed bg-[#000000dd] z-20 p-1 sm:p-3 rounded-b-xl text-[6px] sm:text-base">
+    <img src="/img/NM.png" class="rounded-xl w-5 sm:w-10 h-fit" alt="logo del sitio">
 
-    <nav>
+    <nav class="flex gap-x-1">
         {menuItems.map((menuItem)=>
             <MenuItem {...menuItem} />
         )}
     </nav>
 </header>
+
+<script>
+    // Obtener todos los enlaces del menú
+    const menuLinks = document.querySelectorAll('nav a');
+
+    // Función para activar el enlace correspondiente al desplazarse
+    function activateMenuLink() {
+        let scrollPosition = window.scrollY + window.innerHeight/3;
+
+        // Iterar sobre todos los enlaces del menú
+        menuLinks.forEach(link => {
+            const sectionId = link.getAttribute('href');
+            const section = document.getElementById(sectionId?.replace("/#","") ?? "") as HTMLElement;
+
+            section && sectionId?.includes("experience") && console.log(section.offsetTop, section.offsetHeight, scrollPosition);
+
+            if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                // Agregar clase 'active' al enlace del menú correspondiente a la sección visible
+                link.classList.add('active');
+            } else {
+                // Remover clase 'active' si la sección ya no está visible
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Escuchar el evento scroll para activar los enlaces del menú
+    window.addEventListener('scroll', activateMenuLink);
+</script>

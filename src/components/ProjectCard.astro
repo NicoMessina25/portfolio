@@ -1,0 +1,64 @@
+---
+import type {ETechnologies} from '../types/ETechnologies'
+import type {Img} from '../types/Img'
+import LinkButton from './LinkButton.astro'
+import { techList } from './constants/technologies.astro'
+import GitHub from './icons/GitHub.astro'
+import Icon from './icons/Icon.astro'
+import Link from './icons/Link.astro'
+
+export interface ProjectCardProps {
+    img: Img
+    logo: Img
+    title: string
+    github: string
+    website: string
+    technologies: ETechnologies[],
+}
+
+interface Props extends ProjectCardProps {}
+
+const { img: {src, alt}, logo, title, technologies, github, website } = Astro.props
+
+---
+<li class="flex flex-col lg:flex-row gap-x-4 gap-y-2 justify-between projectCard">
+    <div class="w-full lg:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl lg:hover:-translate-y-3 lg:hover:shadow-2xl border border-accent-800 lg:hover:border-accent-700 lg:hover:bg-accent-800/50">
+          <img alt={alt} class="object-cover object-top w-full transition duration-500 sm:h-full scale-105 lg:scale-125 lg:hover:scale-105" loading="lazy" src={src} />
+        </div>
+    </div>
+    
+    <div class="w-full lg:w-1/2 flex flex-col">
+        <h3 class="text-4xl font-code font-semibold text-accent-300 mb-4">{title}</h3>
+        <ul class="flex flex-wrap gap-y-3 gap-x-3">
+            {techList.filter(t => technologies.includes(t.tech)).map(({name, className, iconalt, iconpath, ...tech})=>
+                <li>
+                    <span class={`flex gap-x-2 items-center ${className} rounded-full text-sm px-2 py-1`}>
+                        <Icon src={iconpath} alt={iconalt} className={"size-4"}  />
+                        {name}
+                    </span>
+                </li>
+            )}
+        </ul>
+        <div class="flex mt-6 gap-x-4">
+            <LinkButton link={github}>
+                <GitHub class="size-5" />
+                Code
+            </LinkButton>
+            <LinkButton link={website}>
+                <Link class="size-5"/>
+                Visit site
+            </LinkButton>
+        </div>
+    </div>
+    <div class="absolute ml-10 -z-10 flex justify-center transform -translate-y-20 translate-x-56 md:translate-x-96  transition-all scale-125">
+        <img src={logo.src} alt={logo.alt} width=350 height="auto" class="logo transition-all duration-500 opacity-[0.05] lg:opacity-0" />
+    </div>
+</li>
+
+
+<style>
+    .projectCard:hover .logo{
+        opacity: 0.05;
+    }
+</style>

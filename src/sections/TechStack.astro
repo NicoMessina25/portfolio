@@ -1,0 +1,39 @@
+---
+import SectionHeader from '../components/SectionHeader.astro'
+import Stack from '../components/icons/Stack.astro'
+
+import { techList } from '../components/constants/technologies.astro'
+
+
+---
+<section>
+    <SectionHeader>
+        <Stack slot='before' class="size-8" />
+        Tech Stack
+    </SectionHeader>
+    <article>
+        {techList.map(({iconpath, iconalt,tech,className, name}, index)=>
+            <div class={`rounded-3xl flex flex-col items-center size-24 p-3 cardTech opacity-30`}>
+                <img src={iconpath} alt={iconalt} class="rounded-md" aria-label="A" />
+            </div>
+        )}
+    </article>
+</section>
+
+<style>
+    section article {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .cardTech{
+        transition: all ease-out 300ms;
+    }
+
+    .cardTech:hover{
+        opacity: 1;
+        transform: scale(2);
+    }
+
+</style>

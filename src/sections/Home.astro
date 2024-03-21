@@ -1,0 +1,35 @@
+---
+import Badge from '../components/Badge.astro';
+import LinkedIn from '../components/icons/LinkedIn.astro'
+import GitHub from '../components/icons/GitHub.astro'
+import Mail from '../components/icons/Mail.astro'
+import {contact} from '../components/constants/contact.astro'
+---
+<section class="h-1/2 flex flex-col">
+    <h1 class="text-3xl lg:text-5xl font-bold relative transition duration-200 mb-2"
+    >Hi there! I'm Nico Messina</h1>
+    <p class="text-xl">Currently studying <span class="font-code text-accent-300 mx-2">Computer Engineering</span> at FASTA College in Mar del Plata, Argentina. Specialized in <span class="font-code text-accent-300 mx-2">React FrontEnd Development</span> and <span class="font-code text-accent-300 mx-2">Java Spring BackEnd Development</span> </p>
+    <div class="flex mt-4 gap-2 flex-wrap">
+        <Badge href={contact.linkedIn}>
+            <LinkedIn slot='before' class="size-4" />
+            LinkedIn
+        </Badge>
+        <Badge href={contact.github}>
+            <GitHub slot='before' class="size-4"  />
+            GitHub
+        </Badge>
+        <Badge href={contact.mailto} >
+            <Mail slot='before' class="size-4"  />
+            e-Mail
+        </Badge>
+    </div>
+    <img src="img/profile.png" alt="Foto de perfil" class="absolute self-end opacity-[.1] rounded-full transform translate-x-40  sm:translate-x-40 scale-[.6] -translate-y-40 sm:-translate-y-64">
+</section>
+
+<style>
+    @media (min-width: 400px) {
+        img {
+            translate: ;
+        }
+    }
+</style>

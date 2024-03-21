@@ -1,0 +1,104 @@
+---
+import { ETechnologies } from "../../types/ETechnologies"
+
+export interface Technologies {
+    name:string
+    iconpath: string
+    iconalt: string
+    className: string
+    tech: ETechnologies
+}
+
+export const techList: Technologies[] = [
+    {
+        name: "React",
+        iconpath: "/img/reactLogo.png",
+        iconalt: "reactLogo",
+        className: "text-white bg-[#1D424B]",
+        tech: ETechnologies.REACT
+    },
+    {
+        name: "Tailwind CSS",
+        iconpath: "/img/tailwindLogo.png",
+        iconalt: "tailwindLogo",
+        className: "text-white bg-[#1a6b6b]",
+        tech: ETechnologies.TAILWIND
+    },
+    {
+        name: "Java",
+        iconpath: "/img/javaLogo.png",
+        iconalt: "javaLogo",
+        className: "bg-[#0E506B] text-white",
+        tech: ETechnologies.JAVA
+    },
+    {
+        name: "JavaScript",
+        iconpath: "/img/jsLogo.png",
+        iconalt: "jsLogo",
+        className: "bg-[#F7DF1E] text-primary-950",
+        tech: ETechnologies.JS
+    },
+    {
+        name: "C",
+        iconpath: "/img/cLogo.png",
+        iconalt: "cLogo",
+        className: "text-primary-950 bg-[#A8B9CC]",
+        tech: ETechnologies.C
+    },
+    {
+        name: "CSS",
+        iconpath: "/img/cssLogo.png",
+        iconalt: "cssLogo",
+        className: "text-white bg-[#134d79]",
+        tech: ETechnologies.CSS
+    },
+    {
+        name: "Python",
+        iconpath: "/img/pythonLogo.png",
+        iconalt: "pythonLogo",
+        className: "text-white bg-[#245280]",
+        tech: ETechnologies.PYTHON
+    },
+    {
+        name: "HTML",
+        iconpath: "/img/htmlLogo.png",
+        iconalt: "htmlLogo",
+        className: "text-white bg-[#b12b1d]",
+        tech: ETechnologies.HTML
+    },
+    {
+        name: "Spring",
+        iconpath: "/img/springLogo.png",
+        iconalt: "springLogo",
+        className: "text-white bg-[#3c6625]",
+        tech: ETechnologies.SPRING
+    },
+    {
+        name: "SQL Server",
+        iconpath: "/img/sqlServerLogo.png",
+        iconalt: "sqlServerLogo",
+        className: "text-white bg-[#95201f]",
+        tech: ETechnologies.SQL_SERVER
+    },{
+        name: "GraphQL",
+        iconpath: "/img/graphqlLogo.png",
+        iconalt: "graphqlLogo",
+        className: "text-secondary bg-[#b00476]",
+        tech: ETechnologies.GRAPHQL
+    },
+    {
+        name: "Next.js",
+        iconpath: "/img/nextjsLogo.png",
+        iconalt: "nextjsLogo",
+        className: "text-secondary bg-[#000000]",
+        tech: ETechnologies.NEXT
+    },{
+        name: "SASS",
+        iconpath: "/img/sassLogo.png",
+        iconalt: "sassLogo",
+        className: "text-secondary bg-[#9e3863]",
+        tech: ETechnologies.SASS
+    }
+];
+
+---
