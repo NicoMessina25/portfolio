@@ -1,0 +1,9 @@
+---
+const {class: className, ...props } = Astro.props
+---
+
+<div {...props} class={`flex flex-col h-full items-center ${className}`}>
+    <div class="size-2 bg-accent-300 rounded-full"></div>
+    <div class="w-0.5 h-full border-solid border-accent-300 border-2" />
+    <div class="size-2 bg-accent-300 rounded-full"></div>
+</div>

@@ -1,0 +1,24 @@
+---
+import SectionHeader from "../components/SectionHeader.astro";
+import Laptop from '../components/icons/Laptop.astro'
+import TimeLineItem from '../components/TimeLineItem.astro'
+import type { TimeLineItemProps } from '../components/TimeLineItem.astro'
+
+const timeLineItems:TimeLineItemProps[] = [{
+    title: "FullStack Developer",
+    subtitle:"Advenio Software",
+    desc: "Developed the Web Appointments system for Medere, and currently working on the admninistrative system for the 'Círculo Odontológico de Mar del Plata'. Also, I'm leading a team, doing testing, refactoring and documenting software",
+    from: 2023,
+    to:'Present'
+}]
+
+---
+<section class="w-full">
+    <SectionHeader>
+        <Laptop slot="before" class="size-8" />
+        Experience
+    </SectionHeader>
+    {timeLineItems.map(timeLineItem => 
+        <TimeLineItem {...timeLineItem} />
+    )}
+</section>

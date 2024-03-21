@@ -1,0 +1,13 @@
+---
+
+export interface IconProps {
+    src:string,
+    alt:string,
+    className?:string
+}
+
+interface Props extends IconProps {}
+
+---
+
+<img {...Astro.props} />

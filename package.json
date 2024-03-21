@@ -1,25 +1,21 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NicoMessina25/portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NicoMessina25/portfolio/issues"
-  },
-  "homepage": "https://github.com/NicoMessina25/portfolio#readme",
-  "devDependencies": {
-    "node-sass": "^8.0.0",
-    "nodemon": "^2.0.20"
+  "dependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/source-code-pro": "^5.0.18",
+    "@fontsource-variable/exo-2": "^5.0.18",
+    "astro": "^4.5.6",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
   }
 }

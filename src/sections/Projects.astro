@@ -1,0 +1,75 @@
+---
+import SectionHeader from "../components/SectionHeader.astro";
+import Code from '../components/icons/Code.astro'
+import type {ProjectCardProps} from '../components/ProjectCard.astro'
+import {ETechnologies} from '../types/ETechnologies'
+import ProjectCard from '../components/ProjectCard.astro'
+
+const projects:ProjectCardProps[] = [{
+    title:"Kygo Web",
+    logo: {
+        src: "/img/kygoLogo.png",
+        alt: "kygoLogo"
+    },
+    img: {
+        src: "/img/kygoPreview.png",
+        alt: "Kygo Web Preview"
+    },
+    technologies: [ETechnologies.HTML, ETechnologies.CSS, ETechnologies.SASS],
+    github: "https://github.com/NicoMessina25/kygoRepository",
+    website:"https://nicomessina25.github.io/kygoRepository/",
+},
+{
+    title: "Star Wars Battles!",
+    logo: {
+        src: "/img/swBattlesLogo.png",
+        alt: "Star Wars Battles logo"
+    },
+    img: {
+        src: "/img/swBattlesPreview.png",
+        alt: "Star Wars Battles preview"
+    },
+    technologies: [ETechnologies.JS, ETechnologies.SASS, ETechnologies.CSS, ETechnologies.HTML],
+    website: "https://nicomessina25.github.io/swBattlesRepository/",
+    github: "https://github.com/NicoMessina25/swBattlesRepository"
+},
+{
+    title: "Star Wars Shop",
+    logo: {
+        src: "/img/swShopLogo.png",
+        alt: "Star Wars Shop logo"
+    },
+    img: {
+        src: "/img/swShopPreview.png",
+        alt: "Star Wars Shop preview"
+    },
+    technologies: [ETechnologies.REACT, ETechnologies.CSS, ETechnologies.SASS, ETechnologies.JS],
+    website: "https://master--starwarsshop.netlify.app",
+    github: "https://github.com/NicoMessina25/swe-commerceMessina"
+},{
+   title: "Rick And Morty: Dimensions!",
+   logo: {
+        src: "/img/rmDimensionsLogo.png",
+        alt: "Star Wars Shop logo"
+    },
+    img: {
+        src: "/img/rmDimensionsPreview.png",
+        alt: "Star Wars Shop preview"
+    },
+    website:"https://tp-progc.vercel.app",
+    github:"https://github.com/NicoMessina25/tp-progc",
+    technologies: [ETechnologies.GRAPHQL, ETechnologies.PYTHON, ETechnologies.NEXT, ETechnologies.TAILWIND]
+}]
+
+---
+<section class="flex flex-col">
+    <SectionHeader>
+        <Code slot="before"  class="size-8" />
+        Projects
+    </SectionHeader>
+    <ul class="flex flex-col gap-y-20">
+        {projects.map((p)=>
+            <ProjectCard {...p} />
+        )}
+    </ul>
+</section>

@@ -1,0 +1,18 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import { contact } from "./constants/contact.astro"
+
+const year = new Date().getFullYear()
+---
+<footer class="flex text-white-600 justify-between w-full py-8 border-t-[1px] border-t-white-800">
+    <p>{`© ${year} Nico Messina. Todos los derechos reservados.`}</p>
+    <div class="flex gap-x-2">
+        <a href={contact.github} class="hover:text-white-300 transition-all duration-200" target="_blank" >
+            <GitHub class="size-10" />
+        </a>
+        <a href={contact.linkedIn} class="hover:text-white-300 transition-all duration-200" target="_blank">
+            <LinkedIn class="size-10" />
+        </a>
+    </div>
+</footer>
